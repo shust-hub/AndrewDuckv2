@@ -11,31 +11,37 @@
 </head>
 <body>
 
-<header>
-    <div class="header grid-header" name="header">
-        <div class="header-title">
-            <p> Мужская одежда премиум класса по 
-            индивидуальным меркам заказчика с 1998г.
-            Богатый опыт 
-            персонального <br> обслуживания самых взыскательных российских клиентов.
-            Уникальное собственное производство.</p>
+    <header>
+        <!-- (БЕЛАЯ ЧАСТЬ ХЕДЕРА С ТЕКСТОМ (В МОБИЛЬНОЙ ВЕРСИИ ИСЧЕЗАЕТ) -->
+        <div class="header grid-header" name="header">
+            <div class="header__title">
+                Уникальное собственное производство мужской одежды премиум-класса по 
+                индивидуальным меркам с 1998г.<br>
+                Богатый  опыт 
+                персонального обслуживания самых взыскательных российских клиентов.
+    
+            </div>
         </div>
-            
-    </div>
-    <div class="header-nav grid-header">
-            <div class="header-logo">
-                    <a href="index.html">
-                        <img src="./img/logo_duck.svg" alt="">
-                       
-                    </a>
+    
+        <!-- НИЖНЯЯ ЧАСТЬ ХЕДЕРА С НАВИГАЦИЕЙ И ЛОГО -->
+        <div class="header__nav header-nav grid-header">
+    
+            <!-- ЛОГО  -->
+            <div class="header-nav__logo nav-logo">
+                <a class="nav-logo__link logo-link" href="index.html">
+                    <img class="logo-link__img" src="img/logo_duck.svg" alt="">
+                </a>
+            </div>
+    
+            <!-- НАВИГАЦИЯ (ССЫЛКИ) -->
+            <nav class="nav__list nav-list contact__nav">
+                <ul class="nav-list__ul ">
+                    <li class="nav__item"><a class="nav__link" href="index.html">АДРЕСА НАШИХ САЛОНОВ</a></li>
+                </ul>
+            </nav>
+    
         </div>
-        <nav class="head-nav-list head-nav-contact">
-            <ul>
-                <li class="item-center"><a href="contacts.html">АДРЕСА НАШИХ САЛОНОВ</a></liclass="head-nav-list-center">
-            </ul>
-        </nav>
-    </div>
-</header>
+    </header>
 
 <section id="contact" class="container">
     <p class="parking">Возможность удобной парковки. <br> 

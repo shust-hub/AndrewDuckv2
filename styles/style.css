@@ -228,6 +228,8 @@ header
           .header__nav .nav__list .nav-list__ul .nav__item .nav__link {
             font-size: 1em;
             margin-right: 20px; } }
+  .header__nav .contact__nav {
+    grid-column: 8/15; }
   @media (min-width: 299px) and (max-width: 899px) {
     .header__nav {
       margin-top: 25px; }
@@ -689,7 +691,7 @@ form
   height: auto;
   color: black;
   font-size: 1.2em;
-  padding-top: 60px; }
+  padding: 60px 15%; }
   #contact .contact-wrap {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -732,9 +734,11 @@ form
         width: 100%;
         min-height: 238px; }
   @media (min-width: 299px) and (max-width: 899px) {
-    #contact .city {
-      width: 100%;
-      margin-bottom: 32px; } }
+    #contact {
+      padding: 60px 5%; }
+      #contact .city {
+        width: 100%;
+        margin-bottom: 32px; } }
 
 #room1 {
   background-image: url("../img/room1.png");
