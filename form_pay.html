@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Andrew Duck</title>
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Prata&display=swap&subset=cyrillic" rel="stylesheet">
+  <script src="https://use.fontawesome.com/releases/v5.11.2/js/all.js" data-auto-replace-svg="nest"></script>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+
+<section id="pay">
+    <div class="payment-container">
+         <div class="payment-container__img">
+            <div class="img__logo">
+                <a href="index.html">
+                    <img src="img/logo_duck.svg" alt="">
+                </a>
+            </div>
+            <img src="img/payment.png" alt="" class="img__form-img">
+         </div>
+
+
+        <form class="payment-container__payment-form" id="payment-form" >
+            <div class="payment-form__title">БЛАНК ЗАКАЗА</div>
+
+            <div class="payment-form__input-wrapper">
+                <input name="firstName" type="text" 
+                        class="payment-form__input payment-form__input_first-name" 
+                        placeholder="ИМЯ" >
+
+                <input name="secondName" type="text" 
+                        class="payment-form__input payment-form__input_second-name" 
+                        placeholder="ФАМИЛИЯ" >
+            </div>
+
+            <div class="payment-form__input-wrapper">
+                <input name="tel" type="tel" 
+                 class="payment-form__input payment-form__input_tel" 
+                 placeholder="ТЕЛЕФОН" >
+        
+                <input name="email" type="email" 
+                class="payment-form__input payment-form__input_email" 
+                placeholder="E-MAIL" 
+                >
+            </div>
+
+            <p class="payment-form__description">Город:</p>           
+            <div class="payment-form__radio-wrapper select"> 
+                <div class="radio">
+                    <input class="city" type="radio" name="city[]" value="Москва" id="city-v1"/>
+                    <label for="city-v1"><span></span>Москва </label>
+                </div>
+                <div class="radio">            
+                    <input class="city" type="radio" name="city[]" value="СПб" id="city-v2"/>
+                    <label for="city-v2"><span></span>Санкт-Петербург</label> 
+                </div>
+            </div>
+
+        <p class="payment-form__description">Выберите номинал сертификата или введите сумму на Ваш выбор:</p>             
+        <div class="payment-form__radio-wrapper select"> 
+            <div class="radio">
+                <input class="price" type="radio" name="price[]" value="22 500" id="price-v1"/>
+                <label for="price-v1"><span></span>22 500 &#8381 </label>
+            </div>
+            <div class="radio">            
+                <input class="price" type="radio" name="price[]" value="55 000" id="price-v2"/>
+                <label for="price-v2"><span></span>50 000 &#8381</label> 
+            </div>
+            <div class="radio">            
+                <input class="price" type="radio" name="price[]" value="100 000" id="price-v3"/>
+                <label for="price-v3"><span></span>100 000 &#8381</label> 
+            </div>
+            <div class="radio">  
+                <input class="price" type="radio" name="price[]"  id="price-v4"/>
+                <label for="price-v4"><span></span></label> 
+                <input name="price"  
+                class="payment-form__input payment-form__input" 
+                placeholder="от 25 000 &#8381"
+                min="25000" max="1000000"
+                pattern='^\d{0,8}(\.\d{1,4})?$'
+                >
+            </div>
+         </div>
+
+        <p class="payment-form__description">Указать стоимость на сертефикате:</p>              
+         <div class="payment-form__radio-wrapper select"> 
+            <div class="radio">
+                <input class="indicate-price" type="radio" name="indicate-price[]" value="yes" id="indicate-price-v1"/>
+                <label for="indicate-price-v1"><span></span>Да</label>
+            </div>
+            <div class="radio">            
+                <input class="indicate-price" type="radio" name="indicate-price[]" value="no" id="indicate-price-v2"/>
+                <label for="indicate-price-v2"><span></span>Нет</label> 
+            </div>
+         </div>
+    
+        <p class="payment-form__description">Варианты доставки:</p> 
+         <div class="payment-form__radio-wrapper select">
+            <div class="radio">
+                <input class="delivery" type="radio" name="delivery[]" value="yes" id="delivery-v1"/>
+                <label for="delivery-v1"><span></span>Посыльным дарителю</label>
+            </div>
+            <div class="radio">            
+                <input class="delivery" type="radio" name="delivery[]" value="no" id="delivery-v2"/>
+                <label for="delivery-v2"><span></span>Посыльным одаряемому</label> 
+            </div>
+            <div class="radio">            
+                <input class="delivery" type="radio" name="delivery[]" value="no" id="delivery-v3"/>
+                <label for="delivery-v3"><span></span>Самовывоз из салона</label> 
+            </div>
+         </div>
+
+        <p class="payment-form__description">Оплата:</p>    
+         <div class="payment-form__radio-wrapper select"> 
+            <div class="radio">
+                <input class="payment" type="radio" name="payment[]" value="yes" id="payment-v1"/>
+                <label for="payment-v1"><span></span>На сайте</label>
+            </div>
+            <div class="radio">            
+                <input class="payment" type="radio" name="payment[]" value="no" id="payment-v2"/>
+                <label for="payment-v2"><span></span>При получении/безнал</label> 
+            </div>
+         </div>
+
+         <div class="checks">
+            <div class="checkbox">
+                <input type="checkbox" id="check-konf" name="checkKonf" checked>
+                <label for="check-konf">Политика конфиденциальности</label>
+             </div>
+             <div class="checkbox">
+                <input type="checkbox" id="check-oferta" name="checkOferta" checked>
+                <label for="check-oferta">Договор оферта</label>
+            </div>
+        </div>
+
+        <div class="btn-wrap">
+            <button type="button" class="payment-form__button btn" onclick='validateForm(this.form);'>ОТПРАВИТЬ</button>
+        </div>
+
+        </form>
+    </div>
+
+    
+    
+</section>
+<script src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="order.js"></script>
+
+</body>
+</html>
