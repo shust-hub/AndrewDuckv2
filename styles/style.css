@@ -388,6 +388,9 @@ footer
 @media (max-width: 1345px) and (min-width: 899px) {
   #offer {
     padding: 0 5%; } }
+@media (min-width: 299px) and (max-width: 899px) {
+  #offer {
+    padding: 0 4% 0 calc(4vw + 15px); } }
 /*--------------------------------------------------------------
 form
 --------------------------------------------------------------*/
