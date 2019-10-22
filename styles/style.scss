@@ -44,8 +44,29 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   min-width: 299px;
+  overflow-x: scroll;
   font-family: 'Montserrat', sans-serif;
   color: white;
+}
+
+body,
+button,
+select,
+textarea {
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+    line-height: 1.5;
+    
+    @media (min-width: 900px) and (max-width: 1199px)  {  
+        font-size: 15px;
+    }
+    @media (min-width: 899px) and (max-width: 600px)  {  
+        font-size: 14px;
+    }
+    @media (min-width: 299px) and (max-width: 599px)  {  
+        font-size: 13px;
+    }
 }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
@@ -107,19 +128,19 @@ General styles
     line-height: 58px;
     margin-bottom: 20px;
 
-    @media (min-width: 900px) and (max-width: 1199px)  {  
-        font-size: 2.5em;
-        line-height: 48px;
-    }
-    @media (min-width: 899px) and (max-width: 600px)  {  
-        font-size: 2em;
-        line-height: 38px;
-        br {
-            content: "";
-        }
-    }
+    // @media (min-width: 900px) and (max-width: 1199px)  {  
+    //     font-size: 2.5em;
+    //     line-height: 48px;
+    // }
+    // @media (min-width: 899px) and (max-width: 600px)  {  
+    //     font-size: 2em;
+    //     line-height: 38px;
+    //     br {
+    //         content: "";
+    //     }
+    // }
     @media (min-width: 299px) and (max-width: 599px)  {  
-        font-size: 1.7em;
+        font-size: 1.5em;
         line-height: 30px;
         br {
             content: "";
@@ -660,14 +681,14 @@ form
     }
 }
 
-@media (min-width: 300px) and (max-width: 750px)  { 
+@media (min-width: 290px) and (max-width: 750px)  { 
     .withSlider{
         flex-wrap: wrap;
         
         .description {
             width: 100%;
             border: none!important;
-            min-height: 50vh;
+            min-height: 60vh;
             .content {
                 align-self: center;
                 padding: 20px;
@@ -695,7 +716,6 @@ form
 @media (min-width: 750px) and (max-width: 1177px) {
     .withSlider{
         .slider-wrapper {
-            
             .slider-item img {
                 position: absolute;
                 height: 450px;
@@ -706,17 +726,6 @@ form
     }  
 }
 
-
-@media (min-width: 1955px) and (max-width: 8000px){
-    .withSlider{
-        .slider-wrapper {
-            .slider-item img {
-                width: 100%;
-                height: auto;
-            }
-        }
-    }  
-}
 
 /*--------------------------------------------------------------
 Стрелки для слайдера

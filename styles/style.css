@@ -39,8 +39,36 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   min-width: 299px;
+  overflow-x: scroll;
   font-family: 'Montserrat', sans-serif;
   color: white; }
+
+body,
+button,
+select,
+textarea {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.5; }
+  @media (min-width: 900px) and (max-width: 1199px) {
+    body,
+    button,
+    select,
+    textarea {
+      font-size: 15px; } }
+  @media (min-width: 899px) and (max-width: 600px) {
+    body,
+    button,
+    select,
+    textarea {
+      font-size: 14px; } }
+  @media (min-width: 299px) and (max-width: 599px) {
+    body,
+    button,
+    select,
+    textarea {
+      font-size: 13px; } }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
 ul[class],
@@ -91,19 +119,9 @@ General styles
   padding: 0;
   line-height: 58px;
   margin-bottom: 20px; }
-  @media (min-width: 900px) and (max-width: 1199px) {
-    .title {
-      font-size: 2.5em;
-      line-height: 48px; } }
-  @media (min-width: 899px) and (max-width: 600px) {
-    .title {
-      font-size: 2em;
-      line-height: 38px; }
-      .title br {
-        content: ""; } }
   @media (min-width: 299px) and (max-width: 599px) {
     .title {
-      font-size: 1.7em;
+      font-size: 1.5em;
       line-height: 30px; }
       .title br {
         content: ""; } }
@@ -515,14 +533,14 @@ form
       width: 100%;
       height: auto; }
 
-@media (min-width: 300px) and (max-width: 750px) {
+@media (min-width: 290px) and (max-width: 750px) {
   .withSlider {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
     .withSlider .description {
       width: 100%;
       border: none !important;
-      min-height: 50vh; }
+      min-height: 60vh; }
       .withSlider .description .content {
         -ms-flex-item-align: center;
             align-self: center;
@@ -544,10 +562,6 @@ form
     position: absolute;
     height: 450px;
     width: 450px; } }
-@media (min-width: 1955px) and (max-width: 8000px) {
-  .withSlider .slider-wrapper .slider-item img {
-    width: 100%;
-    height: auto; } }
 /*--------------------------------------------------------------
 Стрелки для слайдера
 --------------------------------------------------------------*/
