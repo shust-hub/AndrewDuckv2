@@ -229,7 +229,7 @@ header
             font-size: 1em;
             margin-right: 20px; } }
   .header__nav .contact__nav {
-    grid-column: 8/15; }
+    grid-column: 8/16; }
   @media (min-width: 299px) and (max-width: 899px) {
     .header__nav {
       margin-top: 25px; }
