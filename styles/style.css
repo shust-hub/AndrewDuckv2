@@ -764,6 +764,9 @@ form
   padding: 20px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
+  .payment-container .msg_error {
+    color: red;
+    height: 25px; }
   .payment-container .payment-form__title {
     color: black;
     font-family: 'Prata', serif;

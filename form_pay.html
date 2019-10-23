@@ -51,11 +51,11 @@
             <p class="payment-form__description">Город:</p>           
             <div class="payment-form__radio-wrapper select"> 
                 <div class="radio">
-                    <input class="city" type="radio" name="city[]" value="Москва" id="city-v1"/>
+                    <input class="city" type="radio" name="city" value="Москва" id="city-v1" checked/>
                     <label for="city-v1"><span></span>Москва </label>
                 </div>
                 <div class="radio">            
-                    <input class="city" type="radio" name="city[]" value="СПб" id="city-v2"/>
+                    <input class="city" type="radio" name="city" value="СПб" id="city-v2"/>
                     <label for="city-v2"><span></span>Санкт-Петербург</label> 
                 </div>
             </div>
@@ -63,25 +63,23 @@
         <p class="payment-form__description">Выберите номинал сертификата или введите сумму на Ваш выбор:</p>             
         <div class="payment-form__radio-wrapper select"> 
             <div class="radio">
-                <input class="price" type="radio" name="price[]" value="22 500" id="price-v1"/>
+                <input class="price" type="radio" name="price" value="22500" id="price-v1" checked/>
                 <label for="price-v1"><span></span>22 500 &#8381 </label>
             </div>
             <div class="radio">            
-                <input class="price" type="radio" name="price[]" value="55 000" id="price-v2"/>
+                <input class="price" type="radio" name="price" value="50000" id="price-v2"/>
                 <label for="price-v2"><span></span>50 000 &#8381</label> 
             </div>
             <div class="radio">            
-                <input class="price" type="radio" name="price[]" value="100 000" id="price-v3"/>
+                <input class="price" type="radio" name="price" value="100000" id="price-v3"/>
                 <label for="price-v3"><span></span>100 000 &#8381</label> 
             </div>
             <div class="radio">  
-                <input class="price" type="radio" name="price[]"  id="price-v4"/>
+                <input class="price" type="radio" name="price" id="price-v4"/>
                 <label for="price-v4"><span></span></label> 
                 <input name="price"  
-                class="payment-form__input payment-form__input" 
+                class="payment-form__input-price" 
                 placeholder="от 25 000 &#8381"
-                min="25000" max="1000000"
-                pattern='^\d{0,8}(\.\d{1,4})?$'
                 >
             </div>
          </div>
@@ -89,11 +87,11 @@
         <p class="payment-form__description">Отобразить стоимость на сертификате:</p>              
          <div class="payment-form__radio-wrapper select"> 
             <div class="radio">
-                <input class="indicate-price" type="radio" name="indicate-price[]" value="yes" id="indicate-price-v1"/>
+                <input class="indicate-price" type="radio" name="indicate-price" checked value="Да" id="indicate-price-v1"/>
                 <label for="indicate-price-v1"><span></span>Да</label>
             </div>
             <div class="radio">            
-                <input class="indicate-price" type="radio" name="indicate-price[]" value="no" id="indicate-price-v2"/>
+                <input class="indicate-price" type="radio" name="indicate-price" value="Нет" id="indicate-price-v2"/>
                 <label for="indicate-price-v2"><span></span>Нет</label> 
             </div>
          </div>
@@ -101,15 +99,15 @@
         <p class="payment-form__description">Варианты доставки:</p> 
          <div class="payment-form__radio-wrapper select">
             <div class="radio">
-                <input class="delivery" type="radio" name="delivery[]" value="yes" id="delivery-v1"/>
+                <input class="delivery" type="radio" name="delivery"checked  value="Посыльным дарителю" id="delivery-v1"/>
                 <label for="delivery-v1"><span></span>Посыльным дарителю</label>
             </div>
             <div class="radio">            
-                <input class="delivery" type="radio" name="delivery[]" value="no" id="delivery-v2"/>
+                <input class="delivery" type="radio" name="delivery" value="Посыльным одаряемому" id="delivery-v2"/>
                 <label for="delivery-v2"><span></span>Посыльным одаряемому</label> 
             </div>
             <div class="radio">            
-                <input class="delivery" type="radio" name="delivery[]" value="no" id="delivery-v3"/>
+                <input class="delivery" type="radio" name="delivery" value="Самостоятельно из салона" id="delivery-v3"/>
                 <label for="delivery-v3"><span></span>Самостоятельно из салона</label> 
             </div>
          </div>
@@ -117,11 +115,11 @@
         <p class="payment-form__description">Оплата:</p>    
          <div class="payment-form__radio-wrapper select"> 
             <div class="radio">
-                <input class="payment" type="radio" name="payment[]" value="yes" id="payment-v1"/>
+                <input class="payment" type="radio" name="payment" checked value="На сайте" id="payment-v1"/>
                 <label for="payment-v1"><span></span>На сайте</label>
             </div>
             <div class="radio">            
-                <input class="payment" type="radio" name="payment[]" value="no" id="payment-v2"/>
+                <input class="payment" type="radio" name="payment" value="При получении/безнал" id="payment-v2"/>
                 <label for="payment-v2"><span></span>При получении/безнал</label> 
             </div>
          </div>
@@ -132,13 +130,16 @@
                 <label for="check-konf">Политика конфиденциальности</label>
              </div>
              <div class="checkbox">
-                <input type="checkbox" id="check-oferta" name="checkOferta" checked>
+                <input type="checkbox" id="check-oferta" name="checkKonf" checked>
                 <label for="check-oferta">Договор оферта</label>
             </div>
         </div>
+        
+        <div class="msg_error"> </div>
 
         <div class="btn-wrap">
-            <button type="button" class="payment-form__button btn" onclick='validateForm(this.form);'>ОТПРАВИТЬ</button>
+            <button type="button" class="payment-form__button btn"
+             onclick='validateForm(this.form);'>ОТПРАВИТЬ</button>
         </div>
 
         </form>
@@ -148,7 +149,10 @@
     
 </section>
 <script src="jquery-3.4.1.min.js"></script>
-<script type="text/javascript" src="order.js"></script>
-
+<script src="jquery.maskedinput.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<script>
+    $(".payment-form__input_tel").mask("+7(999)999-99-99");
+</script>
 </body>
 </html>

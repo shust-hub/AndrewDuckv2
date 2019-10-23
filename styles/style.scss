@@ -989,6 +989,11 @@ form
     padding: 20px;
     flex-wrap: wrap;
 
+    .msg_error {
+        color: red;
+        height: 25px;
+    }
+
     .payment-form__title {
         color: black;
         font-family: 'Prata', serif;
@@ -1097,7 +1102,7 @@ form
 /* прячем input checkbox */
             margin-bottom: 20px;
             input[type="checkbox"] {
-            display: none;
+                display: none;
             }
             
             /* стили для метки */

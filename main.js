@@ -69,22 +69,56 @@ $(document).ready(function(){
         $('body,html').animate({scrollTop: $(document).height() + $(window).height()},800);
         });
     });
-});
+                                     
 // "use strict";
+}); 
 
-// function validateForm(form) {
-//     console.log("hi!");
-//     if ((document.getElementById('check-konf').checked)&&(document.getElementById('check-oferta').checked)){
-//         console.log("checked!");
-//         let firstName = document.getElementsByClassName("payment-form__input_first-name")[0].value;
-//         let secondName = document.getElementsByClassName("payment-form__input_second-name")[0].value;
-//         let tel = document.getElementsByClassName("tel")[0].value;
-//         let email = document.getElementsByClassName("email")[0].value;
+function validateForm(form) {
+    console.log("hi!");
+    if (checkAgreement()) {
+        let firstName = document.getElementsByClassName("payment-form__input_first-name")[0].value;
+        checkEmpty(firstName);
+        let secondName = document.getElementsByClassName("payment-form__input_second-name")[0].value;
+        checkEmpty(secondName);
+        let tel = document.getElementsByClassName("payment-form__input_tel")[0].value;
+        let email = document.getElementsByClassName("payment-form__input_email")[0].value;
         
-//         console.log(firstName);
-//     }
-//     else 
-//     console.log("not checked!");
-//     // console.log(firstName + secondName+ tel + email);   
-// };
-   
+     
+
+        let city = document.querySelectorAll('input[name="city"]:checked')[0].value;
+        let price = document.querySelectorAll('input[name="price"]:checked')[0].value;
+        if (price == "on") { 
+            price = document.getElementsByClassName("payment-form__input-price")[0].value; 
+        }
+        let indicatePrice = document.querySelectorAll('input[name="indicate-price"]:checked')[0].value;
+        let delivery = document.querySelectorAll('input[name="delivery"]:checked')[0].value;
+        let payment = document.querySelectorAll('input[name="payment"]:checked')[0].value;
+        console.log("all good");
+    }
+};
+
+function checkAgreement() {
+    if ((document.getElementById('check-konf').checked) == false) {
+        console.log("1not_checked!");
+        document.querySelectorAll('label[for="check-konf"]')[0].style.color = "red";
+        return false;
+    } else if
+        ((document.getElementById('check-oferta').checked) == false) {
+        console.log("2not_checked!");   
+        document.querySelectorAll('label[for="check-oferta"]')[0].style.color = "red";
+        return false;
+    } else 
+        return true;
+}
+
+function checkEmpty (str) {
+    if (str.length==0) {
+        // document.getElementsByClassName("msg_error")[0].innerHTML = "Заполните все поля";
+        console.log("msg_error"); 
+        return false;
+    }
+    return true;
+}
+
+
+
