@@ -462,8 +462,8 @@ form
       font-family: 'Prata', serif; }
     #form-certificate .order input[type="radio"] + label span {
       display: inline-block;
-      width: 10px;
-      height: 10px;
+      width: 12px;
+      height: 12px;
       margin: -5px 10px 0 0;
       vertical-align: middle;
       border: 1px solid white;
@@ -829,8 +829,8 @@ form
           font-family: 'Prata', serif; }
         .payment-container .payment-container__payment-form .payment-form__radio-wrapper .radio input[type="radio"] + label span {
           display: inline-block;
-          width: 10px;
-          height: 10px;
+          width: 12px;
+          height: 12px;
           margin: -5px 10px 0 0;
           vertical-align: middle;
           border: 1px solid black;

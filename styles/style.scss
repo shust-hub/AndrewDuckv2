@@ -587,8 +587,8 @@ form
         
         input[type="radio"] + label span {
             display:inline-block;
-            width:10px;
-            height:10px;
+            width:12px;
+            height:12px;
             margin:-5px 10px 0 0;
             vertical-align:middle;
             border: 1px solid white;
@@ -891,7 +891,8 @@ form
     }
 }
 
-
+//СТРАНИЦА КОНТАКТЫ
+//НАДПИСЬ ПРО ПАРКИНГ
 .parking {
     text-align: center;
     margin-bottom: 50px;
@@ -905,12 +906,12 @@ form
     font-size: 1.2em;
     padding: 60px 15%;
 
-.contact-wrap {
-      display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;  
+    .contact-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;  
 
-}
+    }
 
     .title {
         color: black;
@@ -978,6 +979,7 @@ form
     background-size: cover;
 }
 
+//ФОРМА ЗАКАЗА
 .payment-container {
     display: flex;
     color: black;  
@@ -1068,8 +1070,8 @@ form
                 
                 input[type="radio"] + label span {
                     display:inline-block;
-                    width:10px;
-                    height:10px;
+                    width:12px;
+                    height:12px;
                     margin:-5px 10px 0 0;
                     vertical-align:middle;
                     border: 1px solid black;
