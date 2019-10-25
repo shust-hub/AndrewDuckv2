@@ -622,21 +622,26 @@ form
 #suits .slider-wrapper {
   border-right: 4px solid white; }
 
-#accessories .description {
-  background-image: url("../img/acss.png");
-  border-right: 4px solid white;
-  text-align: center; }
-  #accessories .description .content {
-    margin: 0 auto; }
-    #accessories .description .content .title {
-      margin-bottom: 25px; }
-#accessories .slider-wrapper {
-  border-left: 4px solid white; }
-#accessories .slider-wrapper img {
-  width: 100%; }
-@media (min-width: 751px) and (max-width: 1077px) {
-  #accessories .slider-wrapper img {
-    height: 100%; } }
+#accessories {
+  /*
+  .slider-wrapper img{ 
+      width:100%;
+  }
+  @media (min-width: 751px) and (max-width: 1077px){
+      .slider-wrapper img{ 
+         height:100%;
+      }
+  }*/ }
+  #accessories .description {
+    background-image: url("../img/acss.png");
+    border-right: 4px solid white;
+    text-align: center; }
+    #accessories .description .content {
+      margin: 0 auto; }
+      #accessories .description .content .title {
+        margin-bottom: 25px; }
+  #accessories .slider-wrapper {
+    border-left: 4px solid white; }
 
 #gift .description {
   background-image: url("../img/offer1.png");
