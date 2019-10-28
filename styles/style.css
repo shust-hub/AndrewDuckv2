@@ -410,6 +410,8 @@ footer
       background-color: white;
       border: 1px solid white; }
     #offer .offer__content .offer_link {
+      color: white; }
+    #offer .offer__content .offer_link:hover {
       color: #bba15f; }
 
 @media (max-width: 1345px) and (min-width: 899px) {
