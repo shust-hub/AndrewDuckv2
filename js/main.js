@@ -119,7 +119,7 @@ function validateForm(form) {
 
 function checkAgreement() {
     if ((document.getElementById('check-konf').checked) == false) {
-        showError('Ознакомьтесь с политикой конфеденциальности');
+        showError('Ознакомьтесь с политикой конфиденциальности');
         return false;
     } else if
         ((document.getElementById('check-oferta').checked) == false) {   
@@ -167,11 +167,11 @@ function deleteErrors() {
                 showError('Ошибка отправки'); },           
             success: function(){
 
-                document.getElementsByClassName("payment-form__input_first-name")[0].value = "";
-                document.getElementsByClassName("payment-form__input_second-name")[0].value = "";
-                document.getElementsByClassName("payment-form__input_tel")[0].value = "";
-                document.getElementsByClassName("payment-form__input_email")[0].value = "";
-                document.getElementsByClassName("payment-form__input-price")[0].value = "";
+                document.getElementsByClassName("payment-form__input_first-name")[0].value = " ";
+                document.getElementsByClassName("payment-form__input_second-name")[0].value = " ";
+                document.getElementsByClassName("payment-form__input_tel")[0].value = " ";
+                document.getElementsByClassName("payment-form__input_email")[0].value = " ";
+                document.getElementsByClassName("payment-form__input-price")[0].value = " ";
                   
                 var err = document.getElementsByClassName("msg_error")[0];
                 var succ = document.createElement('span');
