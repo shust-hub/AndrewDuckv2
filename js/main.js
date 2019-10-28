@@ -174,7 +174,7 @@ function deleteErrors() {
                 document.getElementsByClassName("payment-form__input-price")[0].value = " ";
                   
                 var err = document.getElementsByClassName("msg_error")[0];
-                var succ = document.createElement('div');
+                var succ = document.createElement('span');
                 succ.classList.add('succ');
                 succ.innerHTML = ("Благодарим Вас за заказ!");
                 err.appendChild(succ);
