@@ -495,8 +495,7 @@ footer
     background-size: cover;
     display: grid;
     border-top: 2px solid white;
-    padding: 0 15%;
-    height: 70vh;
+    padding: 110px 15%;
 
     .offer__content {
         align-self: center;
@@ -531,27 +530,28 @@ footer
 
 @media (max-width: 1345px) and (min-width: 899px)  {  
     #offer{
-        padding: 0 5%;  
+        padding: 100px 5%;  
         
     }
 }
 
 @media (min-width: 299px) and (max-width: 899px)   {  
     #offer{
-        padding: 0 4% 0 calc(4vw + 15px);   
+        padding: 80px 4% 80px calc(4vw + 15px);   
          background-size: cover;
          background-position: 45% center;
 
          .offer__content {
             align-self: center;
+
             .btn {
                 margin: 45px 0 20px;
                 font-size: 0.8em;
             }
 
             .title {
-                font-size: 2em;
-                line-height: 40px;
+                font-size: 1.8em;
+                line-height: 32px;
                 word-spacing: 3px;
             }
             .subtitle{
