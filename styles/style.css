@@ -397,17 +397,16 @@ footer
   display: grid;
   border-top: 2px solid white;
   padding: 0 15%;
-  height: 100vh; }
+  height: 70vh; }
   #offer .offer__content {
     -ms-flex-item-align: center;
         align-self: center; }
     #offer .offer__content .btn {
-      margin: 25px 0 30px;
+      margin: 45px 0 20px;
       background-color: #bba15f;
       border: 1px solid white;
       font-size: 1.1em; }
     #offer .offer__content .btn:hover {
-      margin: 25px 0 30px;
       background-color: white;
       border: 1px solid white; }
     #offer .offer__content .offer_link {
@@ -415,9 +414,12 @@ footer
     #offer .offer__content .offer_link:hover {
       color: #bba15f; }
     #offer .offer__content .title {
-      font-size: 2.8em; }
+      font-size: 2.4em;
+      line-height: 50px;
+      word-spacing: 4px; }
     #offer .offer__content .subtitle {
-      font-size: 1.2em; }
+      font-size: 1.2em;
+      word-spacing: 4px; }
 
 @media (max-width: 1345px) and (min-width: 899px) {
   #offer {
@@ -426,7 +428,20 @@ footer
   #offer {
     padding: 0 4% 0 calc(4vw + 15px);
     background-size: cover;
-    background-position: 45% center; } }
+    background-position: 45% center; }
+    #offer .offer__content {
+      -ms-flex-item-align: center;
+          align-self: center; }
+      #offer .offer__content .btn {
+        margin: 45px 0 20px;
+        font-size: 0.8em; }
+      #offer .offer__content .title {
+        font-size: 2em;
+        line-height: 40px;
+        word-spacing: 3px; }
+      #offer .offer__content .subtitle {
+        font-size: 1.2em;
+        word-spacing: 3px; } }
 /*--------------------------------------------------------------
 form
 --------------------------------------------------------------*/
