@@ -629,7 +629,18 @@ form
   font-size: 5em;
   font-weight: 300;
   -webkit-transition: 0.5s;
-  transition: 0.5s; }
+  transition: 0.5s;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently*/ }
   .slider-arrows img {
     width: auto;
     margin-top: 30px; }
@@ -818,7 +829,8 @@ form
   .payment-container .msg_error {
     color: red;
     height: 25px;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    text-align: center; }
   .payment-container .payment-form__title {
     color: black;
     font-family: 'Prata', serif;
