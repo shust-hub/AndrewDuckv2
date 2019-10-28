@@ -404,7 +404,8 @@ footer
     #offer .offer__content .btn {
       margin: 25px 0 30px;
       background-color: #bba15f;
-      border: 1px solid #bba15f; }
+      border: 1px solid white;
+      font-size: 1.1em; }
     #offer .offer__content .btn:hover {
       margin: 25px 0 30px;
       background-color: white;
@@ -413,6 +414,10 @@ footer
       color: white; }
     #offer .offer__content .offer_link:hover {
       color: #bba15f; }
+    #offer .offer__content .title {
+      font-size: 2.8em; }
+    #offer .offer__content .subtitle {
+      font-size: 1.2em; }
 
 @media (max-width: 1345px) and (min-width: 899px) {
   #offer {
