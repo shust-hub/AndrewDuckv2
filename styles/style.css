@@ -159,29 +159,46 @@ header
 --------------------------------------------------------------*/
 .grid-header {
   display: grid;
-  grid-template-columns: 15% 243px repeat(21, 1fr); }
+  grid-template-columns: 15% 243px repeat(21, 1fr);
+  grid-template-rows: 1fr; }
   @media (min-width: 899px) and (max-width: 1345px) {
     .grid-header {
       grid-template-columns: 5% 180px repeat(21, 1fr); } }
   @media (min-width: 299px) and (max-width: 899px) {
     .grid-header {
+      grid-template-columns: 10px 1fr 10px; } }
+
+.grid-header-nav {
+  display: grid;
+  grid-template-columns: 15% 243px repeat(21, 1fr);
+  grid-template-rows: 1fr; }
+  @media (min-width: 899px) and (max-width: 1345px) {
+    .grid-header-nav {
+      grid-template-columns: 5% 180px repeat(21, 1fr); } }
+  @media (min-width: 299px) and (max-width: 899px) {
+    .grid-header-nav {
       grid-template-columns: repeat(4, 1fr) 180px repeat(4, 1fr);
       grid-template-rows: 100px 1fr; } }
 
 .header {
-  margin-top: 25px;
+  margin-top: 15px;
   padding: 2vh 0;
   background-color: white; }
   .header .header__title {
-    grid-column: 4/22;
+    grid-column: 7/22;
     color: #9c172a;
     justify-self: start;
-    font-size: 0.8em;
+    font-size: 0.95em;
     font-weight: 500;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    text-align: center; }
+    @media (min-width: 299px) and (max-width: 899px) {
+      .header .header__title {
+        grid-column: 2;
+        justify-self: center; } }
   @media (min-width: 299px) and (max-width: 899px) {
     .header {
-      display: none; } }
+      margin-top: 0; } }
 
 .header__nav {
   background-color: #9c172a;
@@ -232,7 +249,7 @@ header
     grid-column: 8/16; }
   @media (min-width: 299px) and (max-width: 899px) {
     .header__nav {
-      margin-top: 25px; }
+      margin-top: 10px; }
       .header__nav .header-nav__logo {
         grid-column: 5/6;
         grid-row: 1; }
@@ -385,7 +402,15 @@ footer
     -ms-flex-item-align: center;
         align-self: center; }
     #offer .offer__content .btn {
-      margin: 25px 0 30px; }
+      margin: 25px 0 30px;
+      background-color: #bba15f;
+      border: 1px solid #bba15f; }
+    #offer .offer__content .btn:hover {
+      margin: 25px 0 30px;
+      background-color: white;
+      border: 1px solid white; }
+    #offer .offer__content .offer_link {
+      color: #bba15f; }
 
 @media (max-width: 1345px) and (min-width: 899px) {
   #offer {
@@ -869,6 +894,9 @@ form
         padding: 10px 0;
         vertical-align: middle;
         font-size: 0.875em; }
+        .payment-container .payment-container__payment-form .checks label a {
+          color: #000;
+          text-decoration: underline; }
       .payment-container .payment-container__payment-form .checks label:before {
         content: " ";
         color: #000;

@@ -165,9 +165,20 @@ function deleteErrors() {
             error:function(){ 
                 alert("server arror");
                 showError('Ошибка отправки'); },           
-            success: function(){                     
-                return true;   
-                // location.href='index.html';                     
+            success: function(){
+
+                firstName = "";
+                secondName = "";
+                tel = "";
+                email = "";
+                price = "";
+                  
+                var err = document.getElementsByClassName("msg_error")[0];
+                var succ = document.createElement('span');
+                succ.classList.add('succ');
+                succ.innerHTML = ("Благодарим Вас за заказ!");
+                err.parentElement.appendChild(succ);
+
             }  
         });
   }

@@ -188,6 +188,19 @@ header
 .grid-header {
     display: grid;
     grid-template-columns: 15% 243px repeat(21, 1fr);
+    grid-template-rows: 1fr;
+
+    @media (min-width: 899px) and (max-width: 1345px)  {  
+        grid-template-columns: 5% 180px repeat(21, 1fr);
+    }
+    @media (min-width: 299px) and (max-width: 899px)  {  
+        grid-template-columns: 10px 1fr 10px;
+    }
+}
+.grid-header-nav {
+    display: grid;
+    grid-template-columns: 15% 243px repeat(21, 1fr);
+    grid-template-rows: 1fr;
 
     @media (min-width: 899px) and (max-width: 1345px)  {  
         grid-template-columns: 5% 180px repeat(21, 1fr);
@@ -200,22 +213,29 @@ header
 
 // (БЕЛАЯ ЧАСТЬ ХЕДЕРА С ТЕКСТОМ (В МОБИЛЬНОЙ ВЕРСИИ ИСЧЕЗАЕТ)
 .header { //ОБЕРТКА
-    margin-top: 25px;
+    margin-top: 15px;
     padding: 2vh 0; 
     background-color: white;
 
     .header__title { //САМ ТЕКСТ
-        grid-column: 4/22;
+        grid-column: 7/22;
         color: $MandarianOrange;
         justify-self: start;
-        font-size: 0.8em;
+        font-size: 0.95em;
         font-weight: 500;
         text-transform: uppercase;
+        text-align: center;
+
+        @media (min-width: 299px) and (max-width: 899px)  { 
+            grid-column: 2;
+            justify-self: center;
+        }
     }
 
     @media (min-width: 299px) and (max-width: 899px)  { 
-        display: none;  
+        margin-top: 0;
     }
+   
 }
 
 // НИЖНЯЯ ЧАСТЬ ХЕДЕРА С НАВИГАЦИЕЙ
@@ -284,7 +304,7 @@ header
     }
 
     @media (min-width: 299px) and (max-width: 899px)  {  
-        margin-top: 25px; // БЕЛВЙ ОТСТУП СВЕРХУ ДЛЯ ЛОГО
+        margin-top: 10px; // БЕЛВЙ ОТСТУП СВЕРХУ ДЛЯ ЛОГО
 
         .header-nav__logo {
             grid-column: 5/6;
@@ -482,6 +502,17 @@ footer
         align-self: center;
         .btn {
             margin: 25px 0 30px;
+            background-color: #bba15f;
+            border: 1px solid #bba15f;
+        }
+        .btn:hover {
+            margin: 25px 0 30px;
+            background-color: white;
+            border: 1px solid white;
+        }
+
+        .offer_link {
+            color: #bba15f;
         }
     }
 }
@@ -1114,6 +1145,10 @@ form
                 padding: 10px 0;
                 vertical-align: middle;
                 font-size: 0.875em;
+                a {
+                    color: #000;
+                    text-decoration: underline;
+                }
             }
             
             /* формируем внешний вид чекбокса в псевдоэлементе before */
