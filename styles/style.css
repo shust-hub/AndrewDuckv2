@@ -928,7 +928,8 @@ form
         vertical-align: middle;
         font-size: 0.875em; }
         .payment-container .payment-container__payment-form .checks label a {
-          color: #000;
+          color: #000; }
+        .payment-container .payment-container__payment-form .checks label a:hover {
           text-decoration: underline; }
       .payment-container .payment-container__payment-form .checks label:before {
         content: " ";
