@@ -74,51 +74,102 @@ $(document).ready(function(){
 }); 
 
 function validateForm(form) {
-    console.log("hi!");
+
+    deleteErrors();
+
     if (checkAgreement()) {
         let firstName = document.getElementsByClassName("payment-form__input_first-name")[0].value;
-        checkEmpty(firstName);
         let secondName = document.getElementsByClassName("payment-form__input_second-name")[0].value;
-        checkEmpty(secondName);
         let tel = document.getElementsByClassName("payment-form__input_tel")[0].value;
         let email = document.getElementsByClassName("payment-form__input_email")[0].value;
-        
-     
-
         let city = document.querySelectorAll('input[name="city"]:checked')[0].value;
         let price = document.querySelectorAll('input[name="price"]:checked')[0].value;
+
         if (price == "on") { 
             price = document.getElementsByClassName("payment-form__input-price")[0].value; 
         }
+
         let indicatePrice = document.querySelectorAll('input[name="indicate-price"]:checked')[0].value;
         let delivery = document.querySelectorAll('input[name="delivery"]:checked')[0].value;
         let payment = document.querySelectorAll('input[name="payment"]:checked')[0].value;
-        console.log("all good");
+
+        if (firstName == '')
+        showError('Введите имя.');
+
+        if (secondName == '')
+        showError('Введите фамилию.');
+
+        if (tel == '')
+        showError('Введите телефон.');
+
+        if (email == '')
+        showError('Введите email.');
+
+        var err = document.getElementsByClassName("msg_error")[0];
+
+        if (!(err.firstChild)) {
+            sendData (firstName, secondName, 
+                tel, email, city, price, 
+                indicatePrice, delivery, payment);
+        }
+
     }
+
 };
 
 function checkAgreement() {
     if ((document.getElementById('check-konf').checked) == false) {
-        console.log("1not_checked!");
-        document.querySelectorAll('label[for="check-konf"]')[0].style.color = "red";
+        showError('Ознакомьтесь с политикой конфеденциальности');
         return false;
     } else if
-        ((document.getElementById('check-oferta').checked) == false) {
-        console.log("2not_checked!");   
-        document.querySelectorAll('label[for="check-oferta"]')[0].style.color = "red";
+        ((document.getElementById('check-oferta').checked) == false) {   
+        showError('Ознакомьтесь с договором оферты');
         return false;
     } else 
         return true;
 }
 
-function checkEmpty (str) {
-    if (str.length==0) {
-        // document.getElementsByClassName("msg_error")[0].innerHTML = "Заполните все поля";
-        console.log("msg_error"); 
-        return false;
-    }
-    return true;
+// создание сообщения об ошибке
+function showError(text) {
+    var err = document.getElementsByClassName("msg_error")[0];
+    var error = document.createElement('span');
+    error.classList.add('error');
+    error.innerHTML = (text+" ");
+    err.appendChild(error);
 }
 
+function deleteErrors() {
+    var err = document.getElementsByClassName("msg_error")[0];
+
+    while (err.firstChild) {
+       err.removeChild(err.firstChild);
+    }
+  }
+
+  function sendData (firstName, secondName, tel, 
+    email, city, price, indicatePrice, delivery, payment) {
+        $.ajax({
+            url: "order.php", 
+            type: "post", 
+            data: { 
+                "firstName":    firstName,
+                "secondName":  secondName,
+                "tel":   tel,
+                "email":   email,
+                "city":   city,
+                "price":   price,
+                "indicatePrice":  indicatePrice,
+                "delivery": delivery,
+                "payment":  payment,
+            },
+            error:function(){ 
+                alert("server arror");
+                showError('Ошибка отправки'); },           
+            success: function(){                     
+                return true;   
+                // location.href='index.html';                     
+            }  
+        });
+  }
 
 
